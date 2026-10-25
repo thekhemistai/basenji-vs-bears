@@ -28,17 +28,17 @@ export default function Home() {
         <>
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-gray-900 to-blue-900 animate-pulse" style={{animationDuration: '4s'}} />
           
-          {/* Floating particles overlay */}
+          {/* Deterministic particle styles keep server and client renders in sync. */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {[...Array(20)].map((_, i) => (
               <div
                 key={i}
                 className="absolute w-1 h-1 bg-white rounded-full opacity-30 animate-float"
                 style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 5}s`,
-                  animationDuration: `${3 + Math.random() * 4}s`
+                  left: `${(i * 37 + 11) % 100}%`,
+                  top: `${(i * 53 + 17) % 100}%`,
+                  animationDelay: `${((i * 7) % 50) / 10}s`,
+                  animationDuration: `${3 + ((i * 11) % 40) / 10}s`
                 }}
               />
             ))}
