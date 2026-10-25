@@ -1,0 +1,40 @@
+# Upload only game source, assets and build inputs.
+*
+!app/
+!app/**
+!components/
+!components/**
+!lib/
+!lib/**
+!public/
+!public/**
+!package.json
+!package-lock.json
+!next.config.js
+!next-env.d.ts
+!tsconfig.json
+!postcss.config.js
+!tailwind.config.ts
+!tailwind.config.js
+!vercel.json
+!.vercelignore
+
+# Keep local state excluded inside every allowed directory.
+**/.env*
+**/.claude/**
+**/.git/**
+**/.vercel/**
+**/node_modules/**
+**/*.db
+**/*.db-*
+**/*.sqlite*
+**/*.pem
+**/*.key
+**/*.bak
+**/*.bak-*
+**/*.backup*
+**/*.log
+**/*~
+**/*.tsbuildinfo
+
+# public/.well-known/farcaster.json remains an included Mini App asset.
